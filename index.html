@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA PIE | Engineered Flavor</title>
+  <meta name="description" content="NOVA PIE is a futuristic pizza experience with AI-assisted recipes, precision baking, and lightning-fast delivery.">
+  <meta name="theme-color" content="#070b16">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-grid"></div>
+
+  <header>
+    <nav>
+      <a class="logo" href="#home">NOVA<span>PIE</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">MENU</button>
+
+      <ul id="navList">
+        <li><a href="#menu">MENU</a></li>
+        <li><a href="#tech">TECH</a></li>
+        <li><a href="#build">BUILD</a></li>
+        <li><a href="#order">ORDER</a></li>
+      </ul>
+
+      <a href="#menu" class="nav-cta">ORDER NOW</a>
+      <button class="sound-toggle is-on" id="soundToggle" aria-pressed="true" aria-label="Toggle sound effects">SFX ON</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy" data-reveal>
+        <p class="hero-tag">NOVA PIZZA NETWORK // LIVE</p>
+        <h1>
+          FUTURE-READY
+          <span>FLAVOR SYSTEM</span>
+        </h1>
+        <p class="hero-desc">
+          Culinary science meets street energy. Every pie is tuned with AI pairings, precision thermal baking,
+          and rapid dispatch for maximum flavor output.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary">EXPLORE MENU</a>
+          <a href="#build" class="btn-ghost">BUILD YOUR PIE</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-reveal>
+        <div class="pizza-core">
+          <div class="ambient-particles" id="ambientParticles" aria-hidden="true"></div>
+          <div class="pizza-ring ring-1"></div>
+          <div class="pizza-ring ring-2"></div>
+          <div class="pizza-ring ring-3"></div>
+          <div class="pizza-emoji">🍕</div>
+
+          <div class="stat-pill pill-1"><strong>2.4M</strong> pies delivered</div>
+          <div class="stat-pill pill-2"><strong>4.97★</strong> average rating</div>
+          <div class="stat-pill pill-3"><strong>18 min</strong> avg delivery</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-bar" data-reveal>
+      <article class="stat-item">
+        <p class="val" id="c1">0</p>
+        <p class="lbl">PIZZAS SOLD TODAY</p>
+      </article>
+      <article class="stat-item">
+        <p class="val">4.97★</p>
+        <p class="lbl">CUSTOMER RATING</p>
+      </article>
+      <article class="stat-item">
+        <p class="val" id="c2">0</p>
+        <p class="lbl">HAPPY CUSTOMERS</p>
+      </article>
+      <article class="stat-item">
+        <p class="val">18 MIN</p>
+        <p class="lbl">FASTEST DELIVERY</p>
+      </article>
+      <article class="stat-item">
+        <p class="val" id="c3">0</p>
+        <p class="lbl">FLAVOR COMPOUNDS</p>
+      </article>
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="section-head" data-reveal>
+        <p class="section-tag">MENU DATABASE // v4.0</p>
+        <h2 class="section-title">SELECT YOUR PAYLOAD</h2>
+        <p class="section-sub">
+          Precision-crafted pizzas optimized for taste density. Signature combinations, veggie systems,
+          inferno profiles, and weekly launch drops.
+        </p>
+      </div>
+
+      <div class="menu-filters" data-reveal>
+        <button class="filter-btn active" onclick="filterMenu('all', this)">ALL UNITS</button>
+        <button class="filter-btn" onclick="filterMenu('sig', this)">SIGNATURE</button>
+        <button class="filter-btn" onclick="filterMenu('veg', this)">VEGGIE</button>
+        <button class="filter-btn" onclick="filterMenu('hot', this)">INFERNO</button>
+        <button class="filter-btn" onclick="filterMenu('new', this)">NEW DROPS</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid" data-reveal></div>
+    </section>
+
+    <section class="tech-section" id="tech">
+      <div data-reveal>
+        <p class="section-tag">SYSTEM ARCHITECTURE</p>
+        <h2 class="section-title">SCIENCE BEHIND THE SLICE</h2>
+        <p class="section-sub">We engineer pizza like a high-performance stack. Measured inputs. Calibrated outcomes.</p>
+
+        <ul class="tech-list">
+          <li>
+            <div class="tech-icon">🌡️</div>
+            <div>
+              <h3>Thermal Precision Baking</h3>
+              <p>Stone-deck ovens tuned to ±2°C for consistent crust lift and caramelization every cycle.</p>
+            </div>
+          </li>
+          <li>
+            <div class="tech-icon">🧬</div>
+            <div>
+              <h3>72-Hour Cold Fermentation</h3>
+              <p>Controlled fermentation develops deeper flavor structures and cleaner dough texture.</p>
+            </div>
+          </li>
+          <li>
+            <div class="tech-icon">🤖</div>
+            <div>
+              <h3>AI Recipe Engine</h3>
+              <p>Flavor model explores pairings across sauces, cheeses, herbs, and heat signatures.</p>
+            </div>
+          </li>
+          <li>
+            <div class="tech-icon">📦</div>
+            <div>
+              <h3>Thermal-Lock Delivery</h3>
+              <p>Insulated packaging keeps pies hot and crisp until handoff at your door.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tech-visual" data-reveal>
+        <div class="tech-core">NOVA ENGINE</div>
+        <div class="tech-node node-a">AI RECIPE</div>
+        <div class="tech-node node-b">THERMAL</div>
+        <div class="tech-node node-c">FERMENT</div>
+        <div class="tech-node node-d">DELIVERY</div>
+      </div>
+    </section>
+
+    <section class="customizer" id="build">
+      <div class="section-head" data-reveal>
+        <p class="section-tag">CUSTOM BUILD MODULE</p>
+        <h2 class="section-title">CONFIGURE YOUR PIE</h2>
+        <p class="section-sub">Build your own pizza matrix and preview flavor score before adding to your order.</p>
+      </div>
+
+      <div class="customizer-grid">
+        <div class="build-panel" data-reveal>
+          <p class="panel-title">CRUST MATRIX</p>
+
+          <div class="choice-group">
+            <span class="choice-label">BASE TYPE</span>
+            <div class="choices" id="crustChoices">
+              <button class="choice active" onclick="selectChoice('crust', 'NEAPOLITAN', this)">NEAPOLITAN</button>
+              <button class="choice" onclick="selectChoice('crust', 'SOURDOUGH', this)">SOURDOUGH</button>
+              <button class="choice" onclick="selectChoice('crust', 'CAULIFLOWER', this)">CAULIFLOWER</button>
+              <button class="choice" onclick="selectChoice('crust', 'CHARCOAL', this)">CHARCOAL</button>
+            </div>
+          </div>
+
+          <div class="choice-group">
+            <span class="choice-label">SIZE PARAMETERS</span>
+            <div class="choices" id="sizeChoices">
+              <button class="choice active" onclick="selectChoice('size', '25cm / ₹199', this)">25 CM</button>
+              <button class="choice" onclick="selectChoice('size', '30cm / ₹299', this)">30 CM</button>
+              <button class="choice" onclick="selectChoice('size', '35cm / ₹399', this)">35 CM</button>
+            </div>
+          </div>
+
+          <div class="choice-group">
+            <span class="choice-label">SAUCE PROTOCOL</span>
+            <div class="choices" id="sauceChoices">
+              <button class="choice active" onclick="selectChoice('sauce', 'SAN MARZANO', this)">SAN MARZANO</button>
+              <button class="choice" onclick="selectChoice('sauce', 'WHITE GARLIC', this)">WHITE GARLIC</button>
+              <button class="choice" onclick="selectChoice('sauce', 'PESTO', this)">PESTO</button>
+              <button class="choice" onclick="selectChoice('sauce', 'TRUFFLE OIL', this)">TRUFFLE OIL</button>
+            </div>
+          </div>
+
+          <div class="choice-group">
+            <span class="choice-label">TOPPINGS (MAX 5)</span>
+            <div class="topping-grid">
+              <button class="topping-btn active" onclick="toggleTopping('Mozzarella', this)"><span>🧀</span> MOZZARELLA</button>
+              <button class="topping-btn" onclick="toggleTopping('Pepperoni', this)"><span>🥩</span> PEPPERONI</button>
+              <button class="topping-btn" onclick="toggleTopping('Mushrooms', this)"><span>🍄</span> MUSHROOMS</button>
+              <button class="topping-btn" onclick="toggleTopping('Truffle', this)"><span>⚫</span> TRUFFLE</button>
+              <button class="topping-btn" onclick="toggleTopping('Jalapeños', this)"><span>🌶️</span> JALAPEÑOS</button>
+              <button class="topping-btn" onclick="toggleTopping('Olives', this)"><span>🫒</span> OLIVES</button>
+              <button class="topping-btn" onclick="toggleTopping('Basil', this)"><span>🌿</span> BASIL</button>
+              <button class="topping-btn" onclick="toggleTopping('Prosciutto', this)"><span>🥓</span> PROSCIUTTO</button>
+              <button class="topping-btn" onclick="toggleTopping('Artichoke', this)"><span>💚</span> ARTICHOKE</button>
+              <button class="topping-btn" onclick="toggleTopping('Burrata', this)"><span>⚪</span> BURRATA</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="pizza-preview" data-reveal>
+          <div class="preview-screen">
+            <p class="preview-label">LIVE PREVIEW</p>
+            <p class="preview-pizza" id="previewEmoji">🍕</p>
+            <p class="preview-name" id="previewName">CUSTOM BUILD</p>
+            <p class="preview-specs" id="previewSpecs">NEAPOLITAN · 25CM · SAN MARZANO · MOZZARELLA</p>
+            <p class="preview-price">₹<span id="priceNum">199</span></p>
+            <button class="btn-primary full" onclick="addCustomToCart()">ADD TO ORDER</button>
+          </div>
+
+          <div class="preview-metrics">
+            <p>FLAVOR SCORE: <span id="flavorScore">87</span>/100</p>
+            <p>HEAT INDEX: <span id="heatIndex">LOW</span></p>
+            <p>PROTEIN: 18G · CARBS: 42G</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="process" id="order">
+      <div class="section-head center" data-reveal>
+        <p class="section-tag">DELIVERY PROTOCOL</p>
+        <h2 class="section-title">FROM ORDER TO ORBIT</h2>
+        <p class="section-sub">Realtime execution from checkout to doorstep.</p>
+      </div>
+
+      <div class="process-steps" data-reveal>
+        <article class="process-step">
+          <div class="step-icon">🛒</div>
+          <h3>CONFIGURE</h3>
+          <p>Select, customize, and push your order payload.</p>
+        </article>
+        <article class="process-step">
+          <div class="step-icon">👨‍🍳</div>
+          <h3>CRAFT</h3>
+          <p>Dough stretch, topping calibration, precision bake.</p>
+        </article>
+        <article class="process-step">
+          <div class="step-icon">📦</div>
+          <h3>SEAL</h3>
+          <p>Thermal-lock packaging with live ETA sync.</p>
+        </article>
+        <article class="process-step">
+          <div class="step-icon">🛵</div>
+          <h3>LAUNCH</h3>
+          <p>Fast rider dispatch with map-ready tracking.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section" data-reveal>
+      <p class="section-tag">INITIATE ORDER</p>
+      <h2>READY TO LAUNCH?</h2>
+      <p>Join millions of customers upgrading their pizza experience.</p>
+      <div class="hero-actions center">
+        <a href="#menu" class="btn-primary">ORDER NOW</a>
+        <a href="#build" class="btn-ghost">BUILD CUSTOM PIE</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <a class="logo" href="#home">NOVA<span>PIE</span></a>
+      <p>Pizza engineered for the next generation: science, flavor, and speed in one box.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>MENU</h4>
+      <a href="#menu">Signature Pies</a>
+      <a href="#menu">Veggie Series</a>
+      <a href="#menu">Inferno Range</a>
+      <a href="#build">Custom Build</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>COMPANY</h4>
+      <a href="#tech">Technology</a>
+      <a href="#order">Delivery Stack</a>
+      <a href="#">Careers</a>
+      <a href="#">Blog</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>CONTACT</h4>
+      <a href="mailto:hello@novapie.io">hello@novapie.io</a>
+      <a href="tel:+918000123456">+91 80001 23456</a>
+      <a href="#">Bengaluru HQ</a>
+      <a href="#order">Track Order</a>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> NOVA PIE TECHNOLOGIES</p>
+    <p>SYSTEM STATUS: <span class="online">ONLINE</span></p>
+  </div>
+
+  <button class="cart-fab" onclick="showCart()" aria-label="Open cart">
+    🛒
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+
+  <div class="toast" id="toast">ITEM ADDED TO ORDER</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
